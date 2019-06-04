@@ -1,0 +1,153 @@
+@import mixins
+body
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: arial
+    user-select: none
+    .wraper
+        position: absolute
+        height: 800px
+        width: 600px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background-color: #fff
+        border-radius: 10px
+        box-shadow: 0px 0px 26px 0px rgba(0,0,0,0.59)
+        overflow: hidden
+        h1
+            font-size: 50px
+            text-align: center
+        .options
+            position: absolute
+            height: 60px
+            width: 90%
+            left: 5%
+            top: 120px
+            background-color: white
+            &::before
+                content: ""
+                position: absolute
+                width: 100%
+                height: 3px
+                background-color: black
+            .add
+                +buttonsStyle(100px)
+            .removeAll
+                +buttonsStyle(0px)
+                width: 90px
+        .tasksBoard
+            position: absolute
+            max-height: 550px
+            width: 550px
+            left: 5%
+            top: 200px
+            background-color: #fff
+            display: flex
+            flex-direction: column
+            overflow-y: scroll
+            &::-webkit-scrollbar  
+                width: 0 !important 
+            .task
+                border: 1px solid #737373
+                min-height: 60px
+                border-radius: 5px
+                margin: 10px 
+                position: relative
+                transition: .2s
+                // box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.39)
+                i
+                    position: absolute
+                    width: 30px
+                    height: 30px
+                    left: 10px
+                    top: 50%
+                    cursor: pointer
+                    transform: translateY(-50%)
+                    font-size: 30px
+                .insideText
+                    position: absolute
+                    width: 450px
+                    left: 70px 
+                    top: 50%
+                    transform: translateY(-50%)
+                    font-size: 25px
+                    line-height: 35px  
+                    display: inline-block    
+                    word-break: break-all    
+        .taskMenager
+            position: absolute
+            height: 80px
+            width: 540px
+            background-color: black
+            top: 120px
+            left: 150%
+            transform: translateX(-50%)
+            transition: 0.4s
+            // display: none
+            input
+                position: absolute
+                height: 35px
+                width: 400px
+                top: 10px
+                left: 10px
+                background-color: #000
+                border: none
+                border-bottom: 1px solid white
+                color: white
+                font-size: 20px
+                &:focus
+                    outline: 0
+            .confirm    
+                position: absolute
+                height: 30px
+                width: 30px
+                top: 25px
+                right: 70px
+                border: 1px solid white
+                background-color: #000000
+                color: white
+                font-size: 30px
+                text-align: center
+                cursor: pointer
+                &:hover
+                    background-color: white
+                    color: black
+            .return
+                position: absolute
+                height: 30px
+                width: 30px
+                top: 25px
+                right: 20px
+                border: 1px solid white
+                background-color: #000000
+                color: white
+                font-size: 30px
+                text-align: center
+                cursor: pointer
+                &:hover
+                    background-color: white
+                    color: black
+                i
+                    display: block
+                    font-size: 18px
+                    line-height: 33px
+
+            .red
+                +colorButtons(10px,#ff3333)
+            .blue
+                +colorButtons(60px,royalblue)
+            .green
+                +colorButtons(110px,#5cd65c)
+            .yellow
+                +colorButtons(160px,#ffff4d)
+            .white
+                +colorButtons(210px,white)
+            .checked
+                border: 1px solid red
+
+
+
+
+

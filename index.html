@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="wraper">
+        <h1>ToDo</h1>
+        <div class="options">
+            <button class="add">Add</button>
+            <button class="removeAll">Remove All</button>
+        </div>
+        <section class="tasksBoard">
+        </section>
+        <section class="taskMenager">
+            <input type="text" id="inputText" placeholder="task">
+            <div class="confirm">+</div>
+            <div class="return"><i class="fas fa-undo-alt"></i></div>
+            <div class="red color"></div>
+            <div class="blue color"></div>
+            <div class="green color checked"></div>
+            <div class="yellow color"></div>
+            <div class="white color"></div>
+        </section>
+    </div>
+
+    <script src="TaskMenager.js"></script>
+    <script src="RemoveTask.js"></script>
+    <script src="AddTask.js"></script>
+    <script src="Main.js"></script>
+
+</body>
+
+</html>

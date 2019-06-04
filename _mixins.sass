@@ -1,0 +1,25 @@
+=buttonsStyle($rightMargin)
+    position: absolute
+    height: 30px
+    width: 60px
+    top: 15px
+    right: $rightMargin
+    background-color: #000
+    color: white
+    border: none
+    cursor: pointer
+    &:hover
+        background-color: #666
+    &:focus
+        outline: 0
+
+=colorButtons($leftMargin, $color)
+    position: absolute
+    height: 18px
+    width: 40px
+    bottom: 5px
+    left: $leftMargin
+    background-color: $color
+    border: none
+    cursor: pointer
+    border: 1px solid white
